@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.apollographql.android'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "run.drop.app"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    lintOptions {
+        lintConfig file("lint.xml")
+    }
+}
+
+repositories {
+    maven {
+        url "http://github.com/wada811/Android-Material-Design-Colors/raw/master/repository/"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    // Don't update constraint layout dependency
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.apollographql.apollo:apollo-runtime:1.2.1'
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.ar:core:1.13.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.13.0'
+    implementation 'com.google.ar.sceneform:core:1.13.0'
+    implementation "com.github.skydoves:colorpickerview:2.1.1"
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    implementation 'com.thebluealliance:spectrum:0.7.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'io.sentry:sentry-android:1.7.16'
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
+
+    implementation ("androidx.fragment:fragment-testing:1.2.0-alpha02") {
+        exclude group: 'androidx.test', module: 'core'
+    }
+    androidTestImplementation 'androidx.test:core:1.2.0'
+}

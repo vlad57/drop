@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1eb980</color>
+    <color name="colorPrimaryVariant">#045d56</color>
+    <color name="colorPrimaryDark">#045d56</color>
+    <color name="colorSecondary">#ff6859</color>
+    <color name="colorSecondaryVariant">#ff9a86</color>
+    <color name="colorBackground">#33333d</color>
+    <color name="colorError">#B00020</color>
+    <color name="colorSurface">#33333d</color>
+    <color name="colorOnPrimary">#ffffff</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnBackground">#ffffff</color>
+    <color name="colorOnError">#ffffff</color>
+    <color name="colorOnSurface">#ffffff</color>
+    <color name="colorStatusBar">#27272f</color>
+    <color name="toolbarColor">#A01EB980</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="textColor1">#861bd8</color>
+    <color name="textColor2">#1bd857</color>
+    <color name="textColor3">#d8601b</color>
+    <color name="textColor4">#d8d81b</color>
+    <color name="textColor5">#d81b2b</color>
+
+    <array name="rainbow">
+        <item>#FD4042</item>
+        <item>#A72BA9</item>
+        <item>#6C3EAF</item>
+        <item>#3B53AD</item>
+        <item>#0095EC</item>
+        <item>#00AD5A</item>
+        <item>#FDE85B</item>
+        <item>#FD9436</item>
+        <item>#7E554B</item>
+        <item>#9C9B9C</item>
+    </array>
+</resources>
